@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from .form import LoginForm
+from .form import LoginForm, CreateAccountForm
 
 app = Blueprint("home_page", __name__)
 
@@ -7,6 +7,12 @@ app = Blueprint("home_page", __name__)
 @app.route("/")
 def home():
     return render_template("home.html")
+
+
+@app.route("/createaccount")
+def createaccount():
+    form = CreateAccountForm()
+    return render_template("createaccount.html", form = form)
 
 
 @app.route("/login")

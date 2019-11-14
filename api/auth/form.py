@@ -10,3 +10,12 @@ class LoginForm(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired()])
     remember_me = BooleanField("Remember me")
     submit = SubmitField("Log In")
+
+
+class CreateAccountForm(FlaskForm):
+    email = StringField("Email", validators=[DataRequired(),
+                                             Length(1, 64), Email()])
+    password = PasswordField("Password", validators=[DataRequired(), Length(8, 24)])
+    confirmPassword = PasswordField("Confirm Password", validators=[DataRequired(),
+                                                                    Length(8, 24)])
+    submit = SubmitField("Create")
