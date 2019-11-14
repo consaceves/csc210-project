@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Account</title>
+    <link rel="stylesheet" href="/static/ccreateaccount.css">
 </head>
 <body>
-    <form method="POST">
-      {{ form.hidden_tag() }}
-      {{ form.email.label }}: {{ form.email() }}<br>
-      {{ form.password.label }}: {{ form.password() }}<br>
-      {{ form.confirmPassword.label }}: {{ form.confirmPassword() }}<br> {{ form.submit() }}
-    </form>
+    <div class="box">
+        <form method="POST">
+          {{ form.hidden_tag() }}
+          {{ form.email.label }}: {{ form.email()}}<br>
+          {{ form.password.label }}: {{ form.password() }}<br>
+          {{ form.confirmPassword.label }}: {{ form.confirmPassword() }}<br> {{ form.submit() }}
+        </form>
+    </div>
 </body>
 </html>
