@@ -1,0 +1,66 @@
+body{
+    font-family: Gotham, Sans serif;
+    color: #ffa8a8;
+}
+
+h1{
+    text-align: center;
+    color: darkgrey;
+}
+
+.box{
+    position: absolute;
+    width: 450px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-family: Gotham, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.button1{
+    position: absolute;
+    background-color: #ffa8a8;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+.button1:hover{
+    background-color: darkgrey;
+}
+
+.label{
+    color: #ffa8a8;
+    font-family: Gotham, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    float: left;
+}
+
+.textfield{
+    position: fixed;
+    left: 100%;
+    transform: translate(-100%,0);
+    width: 150px;
+    height: auto;
+    font-size: 22px;
+    color: darkgrey;
+    float: right;
+    font-family: Gotham, sans-serif;
+    font-weight: normal;
+}
+
+.section{
+    width: 100%;
+    margin-bottom: 25px;
+
+}
