@@ -12,10 +12,15 @@ def home():
 @app.route("/createaccount")
 def createaccount():
     form = CreateAccountForm()
-    return render_template("createaccount.html", form = form)
+    return render_template("createaccount.html", form=form)
 
 
 @app.route("/login")
 def login():
     form = LoginForm()
     return render_template("login.html", form=form)
+
+
+@app.route("/hidden")
+def hidden():
+    return render_template("hidden.html")

@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title> Login </title>
+      <link rel="stylesheet" href="/static/login.css">
   </head>
   <body>
+    <div class="box">
+        <h1>Login</h1>
     <form method="POST">
       {{ form.hidden_tag() }}
-      {{ form.email.label }}: {{ form.email() }}<br>
-      {{ form.password.label }}: {{ form.password() }}<br>
-      {{ form.remember_me.label }}: {{ form.remember_me() }}<br> {{ form.submit() }}
+      <section class="section">
+          {{ form.username.label(class_="label") }}: {{ form.username(class_="textfield")}}<br>
+      </section>
+      <section class="section">
+          {{ form.password.label(class_="label") }}: {{ form.password(class_="textfield") }}<br>
+      </section>
+        <section class="section">
+            {{ form.remember_me.label(class_="label") }}: {{ form.remember_me(class_="check") }}<br>
+        </section>
+        {{ form.submit(class_="button") }}
     </form>
+    </div>
   </body>
 </html>
