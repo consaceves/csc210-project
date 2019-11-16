@@ -7,6 +7,13 @@
   <body>
     <div class="box">
         <h1>Login</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }}
+        </div>
+    {% endif %}
+    {% endwith %}
     <form method="POST">
       {{ form.hidden_tag() }}
       <section class="section">
