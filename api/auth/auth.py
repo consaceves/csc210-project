@@ -44,4 +44,7 @@ def login():
 
 @app.route("/hidden")
 def hidden():
-    return render_template("hidden.html")
+    if current_user.is_authenticated:
+        return render_template("hidden.html", user=current_user.username)
+    else:
+        return redirect(url_for("home_page.login"))
