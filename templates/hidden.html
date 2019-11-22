@@ -9,7 +9,7 @@
   <body>
     <div class="mainDiv">
         <h1>Welcome, {{user}}! </h1> 
-        <section><button>Log Out</button></section>
+        <section><button onclick="window.location.href = '{{url_for('home_page.logout')}}'">Log Out</button></section>
     </div>
   </body>
 </html>
