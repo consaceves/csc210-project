@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
-from flask_login import current_user, login_user
+from flask_login import current_user, login_user, logout_user
 from ... import models, db
 from .form import LoginForm, CreateAccountForm
 from random import randint
@@ -48,3 +48,9 @@ def hidden():
         return render_template("hidden.html", user=current_user.username)
     else:
         return redirect(url_for("home_page.login"))
+
+
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect(url_for("home_page.login"))
