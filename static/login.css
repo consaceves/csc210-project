@@ -5,7 +5,54 @@ body{
 
 h1{
     text-align: center;
-    color: darkgrey;
+    color: lightgray;
+}
+
+.button1{
+    position: relative;
+    border: none;
+    color: darkgray;
+    background-color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: Gotham, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    height: 100%;
+    margin-right: 20px;
+  }
+
+.button1:hover{
+    color: #ffa8a8;
+}
+
+.navBar{
+    width: 50%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+    border-style: none;
+    height: 60px;
+    position: fixed;
+    color: #ffa8a8;
+}
+
+.buttons{
+    display: flex;
+    direction: rtl;
+    float: right;
+    height: 100%;
+}
+
+.homeicon{
+    top: 50%;
+    opacity: 0.5;
+}
+
+.profileIcon{
+    margin-top: 10px;
+    direction: ltr;
+    opacity: 0.3;
 }
 
 .box{

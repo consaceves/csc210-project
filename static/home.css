@@ -14,6 +14,7 @@ body{
     font-weight: bold;
     cursor: pointer;
     height: 100%;
+    margin-right: 20px;
   }
 
 .button1:hover{
@@ -40,11 +41,13 @@ body{
 
 .homeicon{
     top: 50%;
+    opacity: 0.5;
 }
 
 .profileIcon{
     margin-top: 10px;
     direction: ltr;
+    opacity: 0.3;
 }
 
 .bodySection{
@@ -52,7 +55,6 @@ body{
     color: darkgray;
     margin-top: 15%;
     transform: translate(-50%,0);
-    background-color: #ffa8a8;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -62,24 +64,61 @@ body{
 .listingHeading{
     font-family: Gotham, sans-serif;
     font-weight: bold;
-    font-size: large;
+    font-size: 30px;
+    color: lightgray;
 }
 
 .listingSection{
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .itemImage{
     position: relative;
-    margin-top: 40px;
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 95%;
+    left: -8%;
+    opacity: 0.85;
 }
 
 .items{
-    width: 33.333%;
-    background-color: black;
-    display: ;
+    width: 30%;
+    background-color: lightgray;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    -webkit-box-shadow: rgba(16, 14, 23, 0.247059) 0 0 30px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-text{
+    direction: rtl;
+    position: relative;
+    height: 30%;
+    width: 60%;
+    background-color: rgba(255, 168, 168, 0.62);
+    margin-bottom: 30px;
+    left: 50%;
+    -webkit-box-shadow: rgba(16, 14, 23, 0.247059) 0 0 30px 0;
+}
+
+.itemName{
+    color: white;
+    font-family: Gotham, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 20%;
+}
+
+.itemPrice{
+    color: white;
+    font-family: Gotham, sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    margin-right: 20%;
 }

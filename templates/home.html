@@ -6,8 +6,10 @@
     <title>Home</title>
   </head>
   <body>
+
+{#  navbar#}
     <section class="navBar">
-        <a href="">
+        <a href={{url_for('home_page.home')}}>
                 <img class="homeicon" width="50" src="/static/simple-house-thin.svg" alt="home">
         </a>
         <div class="buttons">
@@ -18,23 +20,40 @@
             <button class="button1" type="button" name="button" onclick="window.location.href = '{{url_for('home_page.login')}}'">Login</button>
         </div>
     </section>
+
+{#    body#}
     <section class="bodySection">
         <h1 class="listingHeading">Top listings</h1>
         <section class="listingSection">
+
             <div class="items">
                 <a href="">
-                 <img src="/static/macbook.jpg" alt="item" class="itemImage">
+                 <img src="/static/placeholder.jpg" alt="item" class="itemImage">
                 </a>
+                <div class="listing-text">
+                    <h1 class="itemName">Book</h1>
+                    <h1 class="itemPrice">$200.00</h1>
+                </div>
             </div>
+
             <div class="items">
                 <a href="">
-                 <img src="/static/macbook.jpg" alt="item" class="itemImage">
+                 <img src="/static/placeholder.jpg" alt="item" class="itemImage">
                 </a>
+                <div class="listing-text">
+                    <h1 class="itemName">Book</h1>
+                    <h1 class="itemPrice">$200.00</h1>
+                </div>
             </div>
+
             <div class="items">
                 <a href="">
-                 <img src="/static/macbook.jpg" alt="item" class="itemImage">
+                 <img src="/static/placeholder.jpg" alt="item" class="itemImage">
                 </a>
+                <div class="listing-text">
+                    <h1 class="itemName">Book</h1>
+                    <h1 class="itemPrice">$200.00</h1>
+                </div>
             </div>
         </section>
     </section>
