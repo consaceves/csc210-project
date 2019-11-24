@@ -54,3 +54,8 @@ def hidden():
 def logout():
     logout_user()
     return redirect(url_for("home_page.login"))
+
+
+@app.route("/product")
+def product():
+    return render_template("product.html")
