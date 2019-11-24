@@ -88,8 +88,8 @@ body{
     width: 220px;
     height: 220px;
     left: -10%;
-    opacity: 0.85;
     -webkit-box-shadow: rgba(16, 14, 23, 0.247059) 0 0 30px 0;
+    border-radius: 10px;
 }
 
 .items{
@@ -101,17 +101,19 @@ body{
     height: auto;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .listing-text{
     direction: rtl;
     position: relative;
     height: 30%;
-    width: 65%;
-    background-color: rgba(255, 168, 168, 0.62);
+    width: 75%;
+    background-color: rgba(255, 168, 168, 0.70);
     margin-bottom: 30px;
-    left: 45%;
+    left: 35%;
     -webkit-box-shadow: rgba(16, 14, 23, 0.247059) -1px 0 30px 0;
+    border-radius: 5px;
 }
 
 .itemName{

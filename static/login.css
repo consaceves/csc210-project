@@ -80,6 +80,7 @@ h1{
     margin-top: 20px;
     left: 50%;
     transform: translate(-50%);
+    border-radius: 5px;
   }
 
 .button:hover{
