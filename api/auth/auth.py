@@ -1,3 +1,4 @@
+import uuid
 from flask import Blueprint, render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user
 from ... import models, db
@@ -16,7 +17,7 @@ def home():
 def createaccount():
     form = CreateAccountForm()
     if form.validate_on_submit():
-        id = randint(1, 100)
+        id = uuid.uuid4()
         username = form.username.data
         name = form.name.data
         password = form.password.data
