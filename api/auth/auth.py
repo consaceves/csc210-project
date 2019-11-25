@@ -3,7 +3,6 @@ from flask import Blueprint, render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user
 from ... import models, db
 from .form import LoginForm, CreateAccountForm
-from random import randint
 
 app = Blueprint("home_page", __name__)
 
