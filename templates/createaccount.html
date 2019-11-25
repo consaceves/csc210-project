@@ -6,6 +6,22 @@
     <link rel="stylesheet" href="/static/createaccount.css">
 </head>
 <body>
+
+{#navBar#}
+    <section class="navBar">
+        <a href={{url_for('home_page.home')}}>
+                <img class="homeicon" width="50" src="/static/simple-house-thin.svg" alt="home">
+        </a>
+        <div class="buttons">
+            <a href="">
+                <img class="profileIcon" width="30" src="/static/circle.svg" alt="home">
+            </a>
+            <button class="button2" type="button" name="button" onclick="window.location.href = '{{url_for('home_page.createaccount')}}'">Create Account</button><br>
+            <button class="button2" type="button" name="button" onclick="window.location.href = '{{url_for('home_page.login')}}'">Login</button>
+        </div>
+    </section>
+
+{#form#}
     <div class="box">
         <h1>Create Account</h1>
         <form method="POST">

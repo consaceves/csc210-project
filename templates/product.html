@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="/static/product.css">
+</head>
+<body>
+    {#  navbar#}
+    <section class="navBar">
+        <a href={{url_for('home_page.home')}}>
+                <img class="homeicon" width="50" src="/static/simple-house-thin.svg" alt="home">
+        </a>
+        <div class="buttons">
+            <a href="">
+                <img class="profileIcon" width="30" src="/static/circle.svg" alt="home">
+            </a>
+            <button class="button1" type="button" name="button" onclick="window.location.href = '{{url_for('home_page.createaccount')}}'">Create Account</button><br>
+            <button class="button1" type="button" name="button" onclick="window.location.href = '{{url_for('home_page.login')}}'">Login</button>
+        </div>
+    </section>
+
+{#    body#}
+    <section class="bodySection">
+        <img class="itemImage" src="/static/pantone.jpg" alt="product image">
+        <h1 class="itemName">Pantone Book</h1>
+
+        <section class="sellerUsername">
+            <h1 class="sellerLabel">Seller</h1>
+            <h1 class="sellerText">placeholder01</h1>
+        </section>
+
+        <section class="sellerUsername">
+            <h1 class="sellerLabel">Posted Date</h1>
+            <h1 class="sellerText">2019-11-01</h1>
+        </section>
+
+        <section class="sellerUsername">
+            <h1 class="sellerLabel">Price</h1>
+            <h1 class="sellerText">$100</h1>
+        </section>
+
+        <section class="sellerUsername">
+            <h1 class="sellerLabel">Description</h1>
+        </section>
+
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus leo quam, quis sodales tellus suscipit ac
+            . Nunc et dui iaculis, aliquet dui id, imperdiet arcu. Cras id neque quis dui ullamcorper laoreet. Pellentes
+            que nec varius lacus. Fusce viverra mi quis scelerisque molestie. Morbi ac ipsum ex. Morbi erat odio, finibu
+            s sed ex et, ultricies dictum odio. Morbi id ullamcorper lectus.
+        </p>
+
+        <button class="cart">Add to Cart</button>
+    </section>
+
+</body>
+</html>
