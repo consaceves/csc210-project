@@ -18,12 +18,17 @@ def createaccount():
     if form.validate_on_submit():
         id = randint(1, 100)
         username = form.username.data
+        name = form.name.data
         password = form.password.data
 
-        new_user = models.User(id=id, username=username, password=password)
+        new_user = models.User(id=id,
+                               username=username,
+                               name=name,
+                               password=password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for("home_page.login"))
+        login_user(new_user)
+        return render_template("hidden.html", user=current_user.name)
     return render_template("createaccount.html", form=form)
 
 
@@ -38,14 +43,14 @@ def login():
             flash("Invalid username or password")
             return redirect(url_for("home_page.login"))
         login_user(user, remember=form.remember_me.data)
-        return render_template("hidden.html", user=current_user.username)
+        return render_template("hidden.html", user=current_user.name)
     return render_template("login.html", form=form)
 
 
 @app.route("/hidden")
 def hidden():
     if current_user.is_authenticated:
-        return render_template("hidden.html", user=current_user.username)
+        return render_template("hidden.html", user=current_user.name)
     else:
         return redirect(url_for("home_page.login"))
 
