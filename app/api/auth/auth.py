@@ -20,16 +20,18 @@ def createaccount():
         id = uuid.uuid4()
         username = form.username.data
         name = form.name.data
+        email = form.email.data
         password = form.password.data
 
         new_user = models.User(id=id,
                                username=username,
                                name=name,
+                               email=email,
                                password=password)
         db.session.add(new_user)
         db.session.commit()
 
-        msg = Message("Welcome to Ebay 2.0", sender="constanza.acevesr@gmail.com", recipients=["cacevesr@u.rochester.edu", "jxu51@u.rochester.edu"])
+        msg = Message("Welcome to Ebay 2.0", sender="constanza.acevesr@gmail.com", recipients=[email])
         mail.send(msg)
 
         login_user(new_user)

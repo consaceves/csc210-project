@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from .. import db
 from flask_login import UserMixin
 from sqlalchemy import Column, String
-from sqlalchemy_utils import UUIDType
+from sqlalchemy_utils import UUIDType, EmailType
 
 
 class User(UserMixin, db.Model):
@@ -12,6 +12,7 @@ class User(UserMixin, db.Model):
     id = Column(UUIDType(binary=False), primary_key=True)
     username = Column(String(100), unique=True, nullable=False, index=True)
     name = Column(String(100), nullable=False)
+    email = Column(EmailType(100), nullable=False)
     password_hash = Column(String(128), nullable=False)
 
     @property
