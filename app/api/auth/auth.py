@@ -52,7 +52,7 @@ def hidden():
     if current_user.is_authenticated:
         return render_template("hidden.html", user=current_user.name)
     else:
-        return redirect(url_for("home_page.login"))
+        return redirect(url_for("home_page.login")), 401
 
 
 @app.route("/logout")
