@@ -1,7 +1,8 @@
 import uuid
 from flask import Blueprint, render_template, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user
-from ... import models, db
+from flask_mail import Message
+from ... import models, db, mail
 from .form import LoginForm, CreateAccountForm
 
 app = Blueprint("home_page", __name__)
@@ -27,6 +28,10 @@ def createaccount():
                                password=password)
         db.session.add(new_user)
         db.session.commit()
+
+        msg = Message("Welcome to Ebay 2.0", sender="constanza.acevesr@gmail.com", recipients=["cacevesr@u.rochester.edu", "jxu51@u.rochester.edu"])
+        mail.send(msg)
+
         login_user(new_user)
         return render_template("hidden.html", user=current_user.name)
     return render_template("createaccount.html", form=form)
