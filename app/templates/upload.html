@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Upload</title>
+    </head>
+    <body>
+        {#form#}
+        <div class="box">
+            <h1>Sell a product</h1>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <section class="section">
+                    {{ form.name.label(class_="label") }}: {{ form.name(class_="textfield")}}<br>
+                </section>
+                <section class="section">
+                        {{ form.price.label(class_="label") }}: {{ form.price(class_="textfield")}}<br>
+                    </section>
+                    <section class="section">
+                        {{ form.description.label(class_="label") }}: {{ form.description(class_="textfield")}}<br>
+                    </section>
+                <section class="section">
+                    {{ form.condition.label(class_="label") }}: {{ form.condition(class_="textfield") }}<br>
+                </section>
+                <section class="section">
+                        <input type=file name=photo>
+                </section><br> {{ form.submit(class_="button1") }}
+            </form>
+        </div>
+    </body>
+</html>

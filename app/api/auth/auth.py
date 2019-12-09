@@ -1,8 +1,8 @@
 import uuid
-from flask import Blueprint, render_template, redirect, url_for, flash
+from flask import Blueprint, render_template, redirect, url_for, flash, request
 from flask_login import current_user, login_user, logout_user
 from flask_mail import Message
-from ... import models, db, mail
+from ... import models, db, mail, photos
 from .form import LoginForm, CreateAccountForm
 
 app = Blueprint("home_page", __name__)

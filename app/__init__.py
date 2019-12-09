@@ -3,10 +3,12 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_mail import Mail
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 # init SQLAlchemy so we can use it later in our models
 db = SQLAlchemy()
 mail = Mail()
+photos = UploadSet('photos', IMAGES)
 
 
 def create_app():
@@ -23,9 +25,11 @@ def create_app():
     app.config["SQLALCHEMY_DATABASE_URI"] = \
         f"sqlite:///{os.path.join(appdir, 'ebay2.db')}"
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+    app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
 
     db.init_app(app)
     mail.init_app(app)
+    configure_uploads(app, photos)
 
     login_manager = LoginManager()
     login_manager.login_view = "auth.login"
@@ -45,5 +49,6 @@ def create_app():
     # blueprint for auth routes in our app
     from . import api
     app.register_blueprint(api.auth.app)
+    app.register_blueprint(api.product.app)
 
     return app
