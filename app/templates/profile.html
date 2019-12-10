@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Profile</title>
+    <link rel="stylesheet" href="/static/profile.css">
+
 </head>
 <body>
  {#  navbar#}
     <section class="navBar">
         <a href={{url_for('home_page.home')}}>
-                <img class="homeicon" width="50" src="/static/simple-house-thin.svg" alt="home">
+                <img class="homeicon" width="50" src="/static/home.png" alt="home">
         </a>
         <div class="buttons">
             <a href="">
@@ -20,7 +22,23 @@
     </section>
 
 {#  body#}
+<section class="bodySection">
+    <img class="userImage" src="/static/avatar.gif" alt="product image">
+    <h1 class="userName">Wayne</h1>
 
+    <section class="Profile">
+        <h1 class="sellerLabel">Username</h1>
+        <h1 class="sellerText">placeholder01</h1>
+    </section>
+
+    <section class="Profile">
+        <h1 class="sellerLabel">Email</h1>
+        <h1 class="sellerText">justkidding@gmail.com</h1>
+    </section>
+
+    <button class="cart">Return Home</button>
+
+</section>
 
 </body>
 </html>
