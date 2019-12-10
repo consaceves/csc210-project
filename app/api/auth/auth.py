@@ -71,3 +71,8 @@ def logout():
 @app.route("/product")
 def product():
     return render_template("product.html")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")

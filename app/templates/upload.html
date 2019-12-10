@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Upload</title>
+        <link rel="stylesheet" href="/static/upload.css">
     </head>
     <body>
         {#form#}
@@ -12,11 +13,14 @@
                     {{ form.name.label(class_="label") }}: {{ form.name(class_="textfield")}}<br>
                 </section>
                 <section class="section">
-                        {{ form.price.label(class_="label") }}: {{ form.price(class_="textfield")}}<br>
-                    </section>
-                    <section class="section">
-                        {{ form.description.label(class_="label") }}: {{ form.description(class_="textfield")}}<br>
-                    </section>
+                    {{ form.price.label(class_="label") }}: {{ form.price(class_="textfield")}}<br>
+                </section>
+                <section class="section">
+                    {{ form.description.label(class_="label") }}: <br>
+                </section>
+                <section>
+                    {{ form.description(class_="textArea")}}<br>
+                </section>
                 <section class="section">
                     {{ form.condition.label(class_="label") }}: {{ form.condition(class_="textfield") }}<br>
                 </section>
