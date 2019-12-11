@@ -16,13 +16,15 @@ def upload_new_product():
         price = form.price.data
         description = form.description.data
         condition = form.condition.data
+        id = uuid.uuid4()
 
-        new_product = models.Product(id=uuid.uuid4(),
+        new_product = models.Product(id=id,
                                      name=name,
                                      price=price,
                                      description=description,
                                      condition=condition)
-        db.session.add(new_product)
+        new_user_product_relationship = models.ProductUserAssociation(user_id=current_user.id, product_id=id)
+        db.session.add_all([new_product, new_user_product_relationship])
         db.session.commit()
     return render_template("upload.html", form=form)
 
